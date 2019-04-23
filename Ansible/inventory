@@ -1,0 +1,21 @@
+
+[app] 
+NILPRD-RHVAPP01 ansible_host=10.23.170.21
+NILPRD-RHVAPP02 ansible_host=10.23.170.22
+NILPRD-RHVAPP03 ansible_host=10.23.170.23
+NILPRD-RHVAPP04 ansible_host=10.23.170.24
+NILPRD-RHVAPP05 ansible_host=10.23.170.25
+NILPRD-RHVAPP06 ansible_host=10.23.170.26
+NILPRD-RHVAPP07 ansible_host=10.23.170.27
+NILPRD-RHVAPP08 ansible_host=10.23.170.28
+
+[mgt]
+NILPRD-RHVMGT01 ansible_host=10.23.170.29
+NILPRD-RHVMGT02 ansible_host=10.23.170.30
+NILPRD-RHVMGT03 ansible_host=10.23.170.31 
+
+[he]
+PUJPRD-RHVMGR ansible_host=10.23.170.20
+
+
+
