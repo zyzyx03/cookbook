@@ -1,0 +1,35 @@
+---
+# Run with ansible-playbook <filename> -K
+# (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
+
+- hosts: primary
+  gather_facts: false
+  tasks:
+
+   - name: Install the latest Packages
+     yum: name='*' state=latest
+
+   - name: Enable the epel-release
+     yum: name=epel-release state=present 
+
+   - name: Install the 'Development tools' packages group
+     yum: name='@Development tools' state=present
+
+   - name: Install Common Packages
+     package: name={{ item }} state=present
+     with_items:
+        - vim
+        - nano
+        - ovirt-guest-agent
+        - nmap        
+        - tmux
+        - screen
+        - bash-completion
+        - bash-completion-extras
+        - net-tools
+
+   - name: Disable SELinux
+     selinux: state=disabled
+
+   - name: Reboot the machine
+     reboot:
