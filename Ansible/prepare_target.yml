@@ -2,7 +2,7 @@
 # Run with ansible-playbook <filename> -K
 # (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
-- hosts: primary
+- hosts: docker
   gather_facts: false
   tasks:
 
@@ -28,8 +28,5 @@
         - bash-completion-extras
         - net-tools
 
-   - name: Disable SELinux
+   - name: Disable SELinux and reboot
      selinux: state=disabled
-
-   - name: Reboot the machine
-     reboot:

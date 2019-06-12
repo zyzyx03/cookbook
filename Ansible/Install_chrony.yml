@@ -2,7 +2,7 @@
 # Run with ansible-playbook <filename> -K
 # (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
-- hosts: secondary
+- hosts: he
   gather_facts: false
   tasks:
 

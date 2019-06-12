@@ -2,10 +2,10 @@
 # Run with ansible-playbook <filename> -K
 # (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
-- hosts: haproxy
+- hosts: docker
   gather_facts: false
   vars:
-    ssh_key: '/root/.ssh/id_ed25519.pub'
+    ssh_key: '/home/zyzyx93/.ssh/id_ed25519.pub'
   tasks:
 
     - name: copy ssh key
