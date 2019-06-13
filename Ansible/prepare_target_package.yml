@@ -1,0 +1,38 @@
+---
+
+- hosts: docker
+  gather_facts: false
+  tasks:
+
+    - name: Install Latest Packages
+      package:
+        name: '*'
+        state: latest
+
+    - name: Enable epel-release
+      package:
+        name: epel-release
+        state: present
+
+    - name: Install the 'Development tools' packages group
+      package:
+        name: '@Development tools'
+        state: present
+    
+    - name: Install common packages
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - vim
+        - nano
+        - ovirt-guest-agent
+        - nmap
+        - tmux
+        - screen
+        - bash-completion
+        - bash-completion-extras
+        - net-tools
+
+    - name: Disable Selinux
+      selinux: state=disabled

@@ -6,18 +6,18 @@
   gather_facts: false
   tasks:
 
-   - name: Install the latest Packages
-     yum: name='*' state=latest
+    - name: Install the latest Packages
+      yum: name='*' state=latest
 
-   - name: Enable the epel-release
-     yum: name=epel-release state=present 
+    - name: Enable the epel-release
+      yum: name=epel-release state=present 
 
-   - name: Install the 'Development tools' packages group
-     yum: name='@Development tools' state=present
+    - name: Install the 'Development tools' packages group
+      yum: name='@Development tools' state=present
 
-   - name: Install Common Packages
-     package: name={{ item }} state=present
-     with_items:
+    - name: Install Common Packages
+      package: name={{ item }} state=present
+      with_items:
         - vim
         - nano
         - ovirt-guest-agent
@@ -28,5 +28,5 @@
         - bash-completion-extras
         - net-tools
 
-   - name: Disable SELinux and reboot
-     selinux: state=disabled
+    - name: Disable SELinux
+      selinux: state=disabled
