@@ -1,9 +1,10 @@
 ---
 
 - name: Deploy KVM
-  hosts: docker
+  hosts: openstackm
   gather_facts: false
   remote_user: root
   roles:
     - common
     - installkvm
+    - cockpit

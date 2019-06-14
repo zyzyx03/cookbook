@@ -1,2 +1,26 @@
 ---
 # tasks file for cockpit
+- name: Install cockpit
+  package: 
+    name: "{{ item }}"
+  loop:
+    - cockpit
+    - cockpit-dashboard
+    - cockpit-machines
+    - cockpit-docker
+    - cockpit-storaged
+    - cockpit-packagekit
+    - cockpit-pcp
+
+- name: start cockpit
+  systemd:
+    name: cockpit.socket
+    state: started
+    enabled: true
+
+- firewalld:
+    zone: public
+    port: 9090/tcp
+    permanent: true
+    state: enabled
+  
