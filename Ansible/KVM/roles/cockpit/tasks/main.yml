@@ -16,6 +16,10 @@
   systemd:
     name: cockpit.socket
     state: started
+
+- name: Enable cockpit socket
+  systemd:
+    name: cockpit.socket
     enabled: true
 
 - firewalld:
@@ -24,3 +28,7 @@
     permanent: true
     state: enabled
   
+- name: Restart firewalld
+  systemd:
+    name: firewalld
+    state: reloaded
