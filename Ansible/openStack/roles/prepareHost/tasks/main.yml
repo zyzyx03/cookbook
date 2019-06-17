@@ -1,0 +1,35 @@
+---
+# tasks file for prepareHost
+- name: Update all package
+  package: 
+     name: '*'
+     state: latest
+
+- name: Install package from remote repo
+  package:
+     name: https://rdoproject.org/repos/openstack-stein/rdo-release-stein.rpm
+     state: present
+
+- name: Install necessary package
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - git
+    - ntp
+    - ntpdate 
+    - openssh-server
+    - python-devel
+    - '@Development Tools'
+
+- name: Stop FirewallD
+  systemd: 
+    name: firewalld 
+    state: stopped
+    masked: yes
+
+- name: Stop NetworkManager
+  systemd:
+    name: NetworkManager
+    state: stopped
+    masked: yes

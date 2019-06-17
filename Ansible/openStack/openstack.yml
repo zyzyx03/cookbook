@@ -1,0 +1,9 @@
+---
+# Prepare Openstack
+
+- name: Prepare Openstack Package
+  hosts: openstack 
+  gather_facts: false
+  remote_user: root
+  roles:
+    - prepareHost
