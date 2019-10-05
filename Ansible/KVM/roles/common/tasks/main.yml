@@ -32,5 +32,6 @@
       
 - name: Disable Selinux
   selinux:
-    state: disabled
+    policy: targeted
+    state: enforcing
     

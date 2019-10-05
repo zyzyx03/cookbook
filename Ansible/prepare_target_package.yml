@@ -1,6 +1,6 @@
 ---
 
-- hosts: docker
+- hosts: openstack
   gather_facts: false
   tasks:
 
@@ -35,4 +35,6 @@
         - net-tools
 
     - name: Disable Selinux
-      selinux: state=disabled
+      selinux: 
+        policy: targeted
+        state: enforcing

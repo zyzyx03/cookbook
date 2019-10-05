@@ -21,8 +21,4 @@ PUJPRD-RHVMGR ansible_host=10.23.170.20
 docker-node1 ansible_host=192.168.0.91
 
 [openstack]
-openstack01 ansible_host=192.168.0.121
-openstakc02 ansible_host=192.168.0.122
-openstack03 ansible_host=192.168.0.123
-openstack04 ansible_host=192.168.0.124
-openstack05 ansible_host=192.168.0.125
+openstack01 ansible_host=192.168.0.211
