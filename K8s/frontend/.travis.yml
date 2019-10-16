@@ -1,0 +1,30 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t zyzyx/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run zyzyx/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket-name: "elasticbeanstalk-ap-northeast-1-230696058574"
+  bucket-path: "docker-react"
+  on:
+    branch: master
+  access_key_id: 
+    secure: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+
+# DockerReact-env.fnx4i9hf6z.ap-northeast-1.elasticbeanstalk.com
+
+# S3 Bucket : arn:aws:s3:::elasticbeanstalk-ap-northeast-1-230696058574
+

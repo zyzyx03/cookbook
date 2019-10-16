@@ -12,7 +12,7 @@ class App extends Component {
         </div>
         <p className="App-intro">
           {/* To get started, edit <code>src/App.js</code> and save to reload. */}
-          I have changed!
+          I was changed on the Feature branch
         </p>
       </div>
     );
