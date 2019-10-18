@@ -1,3 +1,10 @@
+[cluster:vars]
+k_ver="linux-image-4.13.0-26-generic"
+ansible_user=ansible  # ssh login user
+ansible_become=yes  # use sudo 
+ansible_become_method=sudo 
+ansible_become_pass='{{ my_cluser_sudo_pass }}'
+
 
 [app] 
 NILPRD-RHVAPP01 ansible_host=10.23.170.21
