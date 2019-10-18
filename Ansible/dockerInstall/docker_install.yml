@@ -4,7 +4,7 @@
   tasks:
 
    - name: "Installing Docker Prerequisite packages"
-     yum:
+     package:
        name: "{{ item }}"
        state: latest
      with_items:
@@ -19,7 +19,7 @@
        mode: 0644
 
    - name: " Installing Docker latest version"
-     yum:
+     package:
        name: docker-ce
        state: present
 
