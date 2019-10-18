@@ -1,9 +1,8 @@
-[cluster:vars]
-k_ver="linux-image-4.13.0-26-generic"
-ansible_user=ansible  # ssh login user
-ansible_become=yes  # use sudo 
+[docker:vars]
+ansible_user=ansible
+ansible_become=yes 
 ansible_become_method=sudo 
-ansible_become_pass='{{ my_cluser_sudo_pass }}'
+ansible_become_password='{{ my_cluster_sudo_pass }}'
 
 
 [app] 
@@ -25,7 +24,7 @@ NILPRD-RHVMGT03 ansible_host=10.23.170.31
 PUJPRD-RHVMGR ansible_host=10.23.170.20
 
 [docker]
-docker-node1 ansible_host=192.168.0.91
+docker-node1 ansible_host=10.211.108.53
 
 [openstack]
 openstack01 ansible_host=192.168.0.211
