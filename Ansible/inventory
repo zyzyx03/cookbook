@@ -24,7 +24,9 @@ NILPRD-RHVMGT03 ansible_host=10.23.170.31
 PUJPRD-RHVMGR ansible_host=10.23.170.20
 
 [docker]
-docker-node1 ansible_host=10.211.108.53
+Master ansible_host=10.211.108.53
+Worker ansible_host=10.211.108.53
+Worker2 ansible_host=10.211.108.38
 
 [openstack]
 openstack01 ansible_host=192.168.0.211
