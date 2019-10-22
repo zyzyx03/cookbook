@@ -1,0 +1,9 @@
+version: '3'
+services:
+    postgres:
+      image: postgres:latest
+      environment: 
+        - POSTGRES_PASSWORD=mypassword
+      volume:
+        - postgres:/var/lib/postgresql/data
+        
