@@ -1,0 +1,13 @@
+#!/bin/bash
+
+LIST_OF_HOST="Swarm-M Swarm-S1 Swarm-S2"
+
+for i in $LIST_OF_HOST
+do 
+    lxc config set $i security.privileged true && echo "$?"
+    lxc config set $i security.nesting true && echo "$?"
+    lxc config set $i linux.kernel_modules "aufs,zfs,overlay,nf_nat,br_netfilter,xt_conntrack,ip_vs" && echo "$?"
+
+done
+
+
