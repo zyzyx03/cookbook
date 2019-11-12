@@ -1,10 +1,15 @@
-// const val = "Mawashi!!";
-
-// console.log(val);
-
-const val = {
-    a:1,
-    b:2
+const person = {
+    name: "fauzuwan",
+    age: 26,
+    gender: "Male"
 };
 
-console.table(val);
+html = `
+    <ul>
+    <li> My name is ${person.name}</li>
+    <li> I am ${person.age}</li>
+    </ul>
+
+`;
+
+document.body.innerHTML = html;
