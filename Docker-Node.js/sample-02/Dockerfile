@@ -8,6 +8,8 @@ COPY package.json package-lock.json* ./
 
 RUN npm install && npm cache clean --force
 
+RUN apk add --update curl
+
 COPY . .
 
 CMD [ "node", "./bin/www" ]
