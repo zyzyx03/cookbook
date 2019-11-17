@@ -54,4 +54,5 @@ gcloud components install kubectl
 ```bash
 kubectl version --short
 ```
+> [Kubectl Installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux)
 
