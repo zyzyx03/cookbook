@@ -1,5 +1,7 @@
-# Docker Mastery for Node.js Projects From a Docker Captain
+# Docker Mastery for Node.js
 
-This repo is for use in my Udemy Course https://www.bretfisher.com/docker-mastery-for-nodejs
-
-Feel free to create issues or PRs if you find a problem with the repo. Please use the Udemy course for Q&A and course support.
+## Making Image Efficiently
+1. Pick proper FROM
+2. Line order matters
+3. COPY twice: package.json then . .
+4. One apt-get per docker file (try to make it RUN all at once on the top of Dockerfile)
