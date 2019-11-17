@@ -33,3 +33,7 @@ nvm install v12.13.0
 ```bash
 npm -v && node -v
 ```
+
+[Node JS Official doc](https://nodejs.org/dist/latest-v12.x/docs/api/url.html)
+
+[Tutorial Teachers](https://www.tutorialsteacher.com/nodejs/nodejs-tutorials)
