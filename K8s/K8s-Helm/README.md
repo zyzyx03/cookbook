@@ -31,7 +31,7 @@ $ helm repo list
 
 ```
 
-## ‘helm install’: uninstalling a release
+## ‘helm uninstall’: uninstalling a release
 ```bash
 $ helm uninstall <release-name>
 ```
