@@ -1,12 +1,12 @@
-# Asas Nginx: Pelayan berprestasi tinggi 
+# Asas Nginx: Pelayan Berprestasi Tinggi 
 
-## Pengenalan pendek
+## Pengenalan Ringkas
 
  Berbeza dengan pesaingnya Apache yang menghasilkan  bebenang(*thread*) atau proses bagi setiap satu pelayan yang dikendalikan, Nginx menggunakan satu *Master* proses dan 1 proses pekerja(*worker*) untuk mengendalikan kandungan statik dan menyerahkan kandungan dinamik kepada proses yang lain seperti php-fmp. Dengan hanya satu benenang(*thread*) Nginx dapat mengendalikan beribu permintaan pelanggan secara serentak. 
 
  > 1 pekerja(*worker*) proses adalah bilangan lalai(*default*) dan dapat diubah mengikut kesesuaian. Menurut dokumentasi bilangan worker harus dipadankan dengan bilangan teras pada CPU tetapi ia bergantung pada situasi dan kesesuaian persekitaran.  
 
-## Pemasangan Nginx pada server Ubuntu.
+## Pemasangan Nginx Pada Pelayan Ubuntu.
 
 1. Untuk *provisioning* saya menggunakan Terraform dan memilih Digital Ocean sebagai pembekal perkomputeran awan. 
 Pautan panduan bagi menggunakan Terraform disertakan di bawah. 
@@ -34,7 +34,7 @@ Pautan panduan bagi menggunakan Terraform disertakan di bawah.
     ![Picture1](https://drive.google.com/uc?export=view&id=199V-s-7EbJFPRv0vxs94DKHqbyCGxKjc)
 
 
-## Pemasangan Nginx dari kod sumber. 
+## Pemasangan Nginx Dari Kod Sumber. 
 
 1. Muat turun kod sumber terbaru dari pautan di bawah.
 
