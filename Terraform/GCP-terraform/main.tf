@@ -10,7 +10,7 @@ resource "google_compute_instance" "default" {
  zone         = "asia-southeast1-a"
 
  metadata = {
-   ssh-keys = "zyzyx93:${file("~/.ssh/id_ecdsa.pub")}"
+   ssh-keys = "zyzyx93:${file("~/.ssh/GCP.pub")}"
  }
 
  boot_disk {
