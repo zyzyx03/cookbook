@@ -1,4 +1,4 @@
-# Asas Nginx: Pelayan Berprestasi Tinggi 
+# Asas Nginx: Pelayan Web Berprestasi Tinggi 
 
 ## Pengenalan Ringkas
 
@@ -102,6 +102,12 @@ Pautan panduan bagi menggunakan Terraform disertakan di bawah.
 5. Konfigurasi sistemd bagi Nginx
 
     >[Systemd Nginx service file](https://www.nginx.com/resources/wiki/start/topics/examples/systemd/)
+
+    ```bash
+    #Gunakan baris perintah ini untuk mengantifkan service yang baru ditambah.
+
+    systemctl daemon-reload
+    ````
 
 
 
